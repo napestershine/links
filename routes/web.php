@@ -13,10 +13,7 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    $links = \App\Link::all();
-    return view('welcome', compact('links'));
-});
+Route::get('/', 'WelcomeController@welcome');
 
 Auth::routes();
 
