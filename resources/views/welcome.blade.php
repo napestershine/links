@@ -79,9 +79,15 @@
         </div>
 
         <div class="links">
-            @foreach($links as $link)
-                <a href="{{ $link->url }}">{{ $link->title }}</a>
-            @endforeach
+            <ul>
+                @foreach($links as $link)
+                    <li>
+                        <a href="{{ $link->url }}">
+                            {{ $link->title }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </div>
 </div>
