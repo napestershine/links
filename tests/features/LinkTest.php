@@ -13,4 +13,9 @@ class LinkTest extends TestCase
         ]);
         $this->visit('/')->see('dotdev.co');
     }
+
+    public function testWeSeeLinksForm()
+    {
+        $this->visit('/submit')->see('Submit a link');
+    }
 }
