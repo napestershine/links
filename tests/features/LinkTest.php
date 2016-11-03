@@ -11,6 +11,6 @@ class LinkTest extends TestCase
         factory(App\Link::class)->create([
             'title' => 'dotdev.co'
         ]);
-        $this->seeInDatabase('links', ['title' => 'dotdev.co']);
+        $this->visit('/')->see('dotdev.co');
     }
 }
