@@ -82,9 +82,9 @@
             <ul>
                 @foreach($links as $link)
                     <li>
-                        <a href="{{ $link->url }}">
-                            {{ $link->title }}
-                        </a>
+                        <h3><a href="{{ $link->url }}">
+                                {{ $link->title }}
+                            </a></h3>
                     </li>
                 @endforeach
             </ul>
