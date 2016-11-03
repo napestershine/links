@@ -36,4 +36,12 @@ Route::post('/submit', function (Request $request) {
     if ($validator->fails()) {
         return back()->withInput()->withErrors($validator);
     }
+
+    $link = new \App\Link;
+    $link->title = $request->title;
+    $link->url = $request->url;
+    $link->description = $request->description;
+    $link->save();
+
+    return redirect('/');
 });
